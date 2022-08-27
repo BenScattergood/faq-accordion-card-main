@@ -1,0 +1,178 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+#### Text
+
+- Very dark desaturated blue: hsl(238, 29%, 16%)
+- Soft red: hsl(14, 88%, 65%)
+
+#### Gradient
+
+Background gradient:
+
+- Soft violet: hsl(273, 75%, 66%)
+- Soft blue: hsl(240, 73%, 65%)
+
+### Neutral
+
+#### Text
+
+- Very dark grayish blue: hsl(237, 12%, 33%)
+- Dark grayish blue: hsl(240, 6%, 50%)
+
+#### Dividers
+
+- Light grayish blue: hsl(240, 5%, 91%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 12px
+
+### Font
+
+- Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
+- Weights: 400, 700 */
+
+
+
+body {
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    font-family: 'Kumbh Sans', sans-serif;
+    height: 100vh;
+}
+
+.outer {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 8rem 0 0 0;
+    padding: 1rem 1rem 3rem 1rem;
+    border-radius: 1.5rem;
+    background-image: url(images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 0;
+}
+
+.accordian {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    align-self: center;
+}
+
+h2 {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+p {
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.active {
+    font-weight: 600;
+}
+
+.question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.base_line {
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+
+.question :hover {
+    color: hsl(14, 88%, 65%);
+}
+
+.answer {
+    display: none;
+}
+
+#woman_mobile {
+    transform: scale(0.75);
+    margin: -10rem 0 0 0;
+    width: 20rem;
+    align-self: center;
+}
+
+#bg_pattern {
+    /* position: relative
+    margin-left: 2.2rem;
+    */
+
+}
+
+@media only screen and (max-width: 1270px) {
+    #desktop_box {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1271px) {
+    .outer {
+        width: 60%;
+    }
+
+    .wrapper {
+        background-image: url(images/illustration-woman-online-desktop.svg), url(images/bg-pattern-desktop.svg);
+        background-size: 450px, 800px;
+        background-position: -5rem 1rem, -27rem -15rem;
+        display: grid;
+        grid-template-columns: 3;
+        margin: 5rem 0 0 0;
+        padding: 0;
+    }
+
+    .accordian {
+        grid-column: 3 /4;
+        padding: 2rem 4rem 5rem 0;
+        max-width: fit-content;
+    }
+
+    .question > img {
+        margin-left: 5rem;
+    }
+
+    h1 {
+        align-self: flex-start;
+    }
+    #desktop_box {
+        grid-column: 0 /1;
+        margin: 9rem 0 0 -6.5rem;
+    }
+
+    #woman_mobile {
+        display: none;
+    }
+}
